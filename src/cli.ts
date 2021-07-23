@@ -182,7 +182,7 @@ prog.command('build [dest]')
 				require('./server/server.js');
 			`.replace(/^\t+/gm, '').trim());
 
-			console.error(`\n> Finished in ${elapsed(start)}. Type ${colors.bold().cyan(`node ${dest}`)} to run the app.`);
+			console.log(`\n> Finished in ${elapsed(start)}. Type ${colors.bold().cyan(`node ${dest}`)} to run the app.`);
 		} catch (err) {
 			console.log(`${colors.bold().red(`> ${err.message}`)}`);
 			console.log(colors.gray(err.stack));
